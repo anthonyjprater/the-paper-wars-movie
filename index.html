@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <title>The Paper Wars</title>
+        <script src="https://kit.fontawesome.com/5398a5e1fc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="main-nav-menu">
+                    <li><button class="main-nav-btn" id="home-btn">Home</button></li>
+                    <li><button class="main-nav-btn" id="video-btn">Video</button></li>
+                    <li><button class="main-nav-btn" id="synopsis-btn">Synopsis</button></li>
+                    <li><button class="main-nav-btn" id="credits-btn">Credits</button></li>
+                </ul>
+                <div class="mobile-menu-hamburger" id="mobile-menu-hamburger">
+                    <button id="icon-container" class="icon-container">
+                        <span class="icon-wrapper"><i class="fa-solid fa-bars" id="icon"></i></span>
+                    </button>
+                    <div class="mobile-menu" id="mobile-menu">
+                        <span class="exit-mobile-menu" id="exit-mobile-menu"><i class="fa-solid fa-x"></i></span>
+                        <ul class="hamburger-menu-nav" id="hamburger-menu-nav">
+                            <li class="main-nav__menu-item"><button class="menu-btn" id="mobile-home-btn">Home</button></li>
+                            <li class="main-nav__menu-item"><button class="menu-btn" id="mobile-video-btn">Video</button></li>
+                            <li class="main-nav__menu-item"><button class="menu-btn" id="mobile-synopsis-btn">Synopsis</button></li>
+                            <li class="main-nav__menu-item"><button class="menu-btn" id="mobile-credits-btn">Credits</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1><span>paper</span> <span>wars</span></h1>
+        </main>
+        <div class="modal" id="summary-modal">
+            <!-- <div class="close-modal-btn-container">
+                <button class="modal-close-btn" id="modal-close-btn">X</button>
+            </div> -->
+            
+            <div class="modal-inner" id="modal-inner">
+                <!-- <h2 class="movie-title">Paper Wars</h2> -->
+                <h2 class="movie-title-img">
+                    <img src="./images/paper-wars-logo.png" alt="Paper Wars movie title"/>
+                </h2>
+                <div class="modal-text-wrapper">
+                    <div class="modal-text" id="modal-text">
+                        <p>The new film "Paper Makers" tells the story of the modern day paper industry through the eyes of the workers who cultivate sustainable forests, apply technologies that nurture and protect them for years to come, and help create nature-based sustainable products — all in one of America's oldest natural industries.</p>
+                        <p>In "Paper Makers", you'll meet the people—foresters, mill workers and engineers—who entered the pulp and paper industry out of a love for our planet and a need to showcase its riches, including:</p>
+                        <p>There's new attention on paper and paper-based packaging which help provide everyday solutions that address a variety of environmental challenges and sustainability goals. From food and beverages to personal care and fashion, paper is at the forefront of innovation, providing sustainable, nature-based solutions for tomorrow. "Paper Makers" unearths little-known facts about how the industry comes together to conserve and regenerate important resources. Walk through the forests with these paper makers and witness their stories firsthand to learn why paper is a sustainable choice for the planet.</p>
+                        <p>There's new attention on paper and paper-based packaging which help provide everyday solutions that address a variety of environmental challenges and sustainability goals. From food and beverages to personal care and fashion, paper is at the forefront of innovation, providing sustainable, nature-based solutions for tomorrow. "Paper Makers" unearths little-known facts about how the industry comes together to conserve and regenerate important resources. Walk through the forests with these paper makers and witness their stories firsthand to learn why paper is a sustainable choice for the planet.s</p>
+                    </div>
+                </div>   
+            </div>
+            
+	    </div>
+        <div class="modal" id="video-modal">
+            <div class="modal-inner" id="modal-inner">
+                <h2 class="movie-title">Paper Wars Videos</h2>
+                <div class="modal-text-wrapper">
+                    <div class="modal-text" id="modal-text">
+                    </div>
+                </div>
+            </div>
+            
+	    </div>
+        <div class="modal" id="credits-modal">
+            <div class="modal-inner" id="modal-inner">
+                <h2 class="movie-title">Paper Wars Credits</h2>
+                <div class="modal-text-wrapper">
+                    <div class="modal-text" id="modal-text">
+                        <div class="credit-wrapper" id="credit-wrapper">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+	    </div>
+        
+        <footer>
+            <div class="footer-wrapper">
+                <button class="production-credits" id="production-credits">Production Credits</button>
+                <span class="copyright">Copyright © 2022 Hungry Fish Media - All Rights Reserved.</span>
+            </div>
+        </footer>
+        <div class="production-modal" id="production-modal">
+            <button class="close-production-modal" id="close-production-modal-btn"><i class="fa-solid fa-x"></i></button>
+            <div class="logo-wrapper">
+                <a href="https://www.hungryfishmedia.org/">
+                    <img class="production-img" src="./images/hungryfishmedia-logo.png" alt="Hungry Fish Media logo"/>
+                </a>
+                <a href="https://www.pnwrstrategies.com/">
+                    <img class="production-img" src="./images/PNWRS-logo.png" alt="Pacific Northwest Regional Strategies logo"/>
+                </a>
+            </div>
+            <span class="copyright">Copyright © 2022 Hungry Fish Media - All Rights Reserved.</span>
+        </div>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>

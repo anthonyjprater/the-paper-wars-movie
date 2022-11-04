@@ -1,0 +1,527 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+  }
+  
+  /* Preferred box-sizing value */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    Remove list styles (bullets/numbers)
+    in case you use it with normalize.css
+  */
+  ol, ul {
+    list-style: none;
+  }
+  
+  /* For images to not be able to exceed their container */
+  img {
+    max-width: 100%;
+  }
+  
+  /* Removes spacing between cells in tables */
+  table {
+    border-collapse: collapse;
+  }
+  
+  /* Revert the 'white-space' property for textarea elements on Safari */
+  textarea {
+    white-space: revert;
+  }
+
+/* A11y */
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+		clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+
+@font-face {
+  font-family: 'Zerox';
+  src:url('./assets/Zerox.ttf.woff') format('woff'),
+      url('./assets/Zerox.ttf.svg#Zerox') format('svg'),
+      url('./assets/Zerox.ttf.eot'),
+      url('./assets/Zerox.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+main {
+    background-image: url('./images/paper-mill-1920.jpg'), linear-gradient(0deg, #9e9999, #073447);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 500%;
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+  font-family: 'Zerox';
+  font-size: 6rem;
+  color: #073447;
+  word-break: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-flow: row wrap;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #9e9999, #073447);
+    height: 10vh;
+}
+
+nav .main-nav-menu {
+    list-style: none;
+    display: none;
+    gap: 1.5rem;
+}
+
+nav .main-nav-menu button {
+    color: #073447;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px #fff;
+    border: none;
+    background-color: transparent;
+}
+
+nav .main-nav-menu button:hover,
+nav .main-nav-menu button:focus {
+    color: #f8f8f8;
+    text-shadow: 1px 1px 0px #000;
+}
+
+
+.mobile-menu-hamburger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+
+.icon-container {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.25rem;
+    background-color: #3c3b3a;
+    border: 1px solid #fff;;
+    border-radius: 5px;
+    z-index: 99;
+    box-shadow: 1px 1px 5px #000;
+    color: #f8f8f8;
+}
+
+.icon-container:hover,
+.icon-container:focus {
+    color: #000;
+    background: #f8f8f8;
+    box-shadow: 1px 1px 5px #fff;
+}
+
+.icon-wrapper {
+    color: inherit;
+}
+
+.mobile-menu {
+    display: none;
+    visibility: none;
+    position: absolute;
+    top: 0px;
+    right: 750px;
+    z-index: -1;
+}
+
+.isOpen {
+    display: flex;
+    z-index: 99;
+    width: 45vw;
+    height: 100vh;
+    background: linear-gradient( 0deg, #073447, #9e9999);
+    position: relative;
+    right: 0px;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 5rem;
+}
+
+.hamburger-menu-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+.hamburger-menu-nav button {
+    background: inherit;
+    color: #073447;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+}
+
+.hamburger-menu-nav button:hover,
+.hamburger-menu-nav button:focus {
+    color: #f8f8f8;
+}
+
+.exit-mobile-menu {
+    align-self: flex-end;
+    padding: 20px 25px 0 0;
+}
+
+.exit-mobile-menu i:hover,
+.exit-mobile-menu i:focus {
+    color: #fff;
+    text-shadow: 2px 2px 15px #000, -2px 2px 15px #000, 2px -2px 15px #000, -2px -2px 15px #000;
+}
+
+footer {
+    display: flex;
+    background: linear-gradient( 0deg, #073447, #9e9999);
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.footer-wrapper span,
+.footer-wrapper button,
+.copyright {
+    color: #f8f8f8;
+    font-size: 0.55rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 10px #000;
+    letter-spacing: 2px;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+
+.production-credits:hover,
+.production-credits:focus {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 1px 1px 5px #fff;
+    
+}
+
+
+/* .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 0.75rem;
+    flex-flow: row wrap;
+    padding: 0rem 0.2rem;
+}
+
+.footer-links li {
+    color: #f8f8f8;
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 0px #000;
+    letter-spacing: 2px;
+
+}
+
+.footer-links li:hover,
+.footer-links:focus {
+    text-shadow: 1px 1px 5px #000, 1px 1px 1px #9e9999;
+    font-size: 0.55rem;
+} */
+
+
+/* MODAL STYLES */
+
+/* SUMMARY MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    /* bottom: 0; */
+    margin: auto;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    border: 1px solid #073447;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px 2px #686;
+    background-color: #000;
+    opacity: 0.95;
+    color: whitesmoke;
+    padding: 1rem;
+    overflow-y: scroll;
+    box-sizing: content-box;
+}
+
+.synopsis-open {
+    display: flex;
+}
+
+.modal-inner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 1rem 2rem;
+}
+
+h2.movie-title-img {
+    max-width: 75%;
+}
+
+.movie-title-img img {
+    width: 200px;
+    height: 100px;
+    box-shadow:  2px 2px 15px #9e9999, -2px -2px 15px #9e9999;
+    border-radius: 2px
+}
+
+.modal-text-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-text {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    padding: 5px 20px;
+    text-shadow: 1px 1px #000;
+}
+
+/* END SUMMARY MODAL */
+
+/* VIDEO MODAL */
+
+/* .video-modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    border: 1px solid #073447;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px 2px #686;
+    background-color: #000;
+    opacity: 0.95;
+    color: whitesmoke;
+    padding: 1rem;
+    overflow-y: scroll;
+    box-sizing: content-box;
+} */
+
+.video-open {
+    display: flex;
+}
+
+
+
+/* END VIDEO MODAL */
+
+/* CREDITS MODAL */
+
+/* .credits-modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: center;
+    height: 85vh;
+    width: 100vw;
+    border: 1px solid #073447;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 6px 2px #686;
+    background-color: #000;
+    opacity: 0.95;
+    color: whitesmoke;
+    padding: 1rem;
+    overflow-y: scroll;
+    box-sizing: content-box;
+} */
+
+.credits-open {
+    display: flex;
+}
+
+
+/* END CREDITS MODAL */
+
+/* PRODUCTION MODAL */
+
+.production-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 8px;
+    z-index: 20;
+    gap:0.5rem;
+}
+
+.open-production-modal {
+    display: flex;
+}
+
+.close-production-modal {
+    color: #4f7f8f;
+    align-self: flex-end;
+    padding: 5px;
+    background: transparent;
+}
+
+.close-production-modal:hover,
+.close-production-modal:focus {
+    font-size: 1.1rem;
+    color: #fff;
+    text-shadow: 1px 1px 10px #fff;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.production-img {
+    max-width: 150px;
+    border-radius: 10px;
+    box-shadow: -1px 1px 3px #9e9999;
+}
+
+.production-img:hover,
+.production-img:focus {
+    box-shadow: 1px 1px 30px #4f7f8f, 1px -1px 30px #4f7f8f ;
+}
+
+
+/* END PRODUCTION MODAL */
+
+/* MODAL STYLES END */
+
+/*----- MEDIA QUERIES -----*/
+
+@media(min-width: 767px) {
+    
+    .modal-inner {
+        width: 750px;
+    }
+    
+    .movie-title-img img {
+        width: 450px;
+        height: 250px;
+    }
+    
+    .production-img {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 844px) {
+
+    main {
+        background-size: 175%;
+    }
+
+    .mobile-menu-hamburger {
+        display: none;
+    }
+    
+    nav .main-nav-menu {
+        display: flex;
+    }
+    .modal {
+        top: 10vh;
+        height: 75vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-inner {
+        width: 970px;
+    }
+}
