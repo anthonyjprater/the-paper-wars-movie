@@ -280,32 +280,18 @@ footer {
     
 }
 
+/* SAMPLE TEXT STYLES */
 
-/* .footer-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 0.75rem;
-    flex-flow: row wrap;
-    padding: 0rem 0.2rem;
+.modal-text ul {
+    list-style-type: disc;
+    padding: 1rem;
 }
 
-.footer-links li {
-    color: #f8f8f8;
-    font-size: 0.55rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 0px #000;
-    letter-spacing: 2px;
-
+.modal-text li {
+    margin-bottom: 1rem;
 }
 
-.footer-links li:hover,
-.footer-links:focus {
-    text-shadow: 1px 1px 5px #000, 1px 1px 1px #9e9999;
-    font-size: 0.55rem;
-} */
-
+/* END SAMPLE TEXT STYLES */
 
 /* MODAL STYLES */
 
@@ -371,6 +357,10 @@ h2.movie-title-img {
     margin-top: 20px;
     padding: 5px 20px;
     text-shadow: 1px 1px #000;
+}
+
+.modal-text p:last-child {
+    padding: 0 0 2rem;
 }
 
 /* END SUMMARY MODAL */
