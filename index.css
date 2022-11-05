@@ -307,7 +307,7 @@ footer {
     margin: auto;
     justify-content: center;
     height: 85vh;
-    width: 100vw;
+    width: 90vw;
     border: 1px solid #073447;
     border-radius: 5px;
     box-shadow: inset 0px 0px 6px 2px #686;
@@ -522,6 +522,7 @@ h2.movie-title-img {
     .modal {
         top: 10vh;
         height: 75vh;
+        width: 100vw;
     }
     
 }
