@@ -425,6 +425,26 @@ h2.movie-title-img {
     display: flex;
 }
 
+.credit-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.crew-member {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 2rem;
+    width: 250px;
+    margin: 10px;
+    background: black;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #000;
+    box-shadow: 4px -2px 15px #9e9999;
+}
 
 /* END CREDITS MODAL */
 
@@ -503,6 +523,12 @@ h2.movie-title-img {
     
     .production-img {
         max-width: 200px;
+    }
+
+    .crew-member {
+        flex-flow: row;
+        width: 400px;
+        
     }
 }
 
